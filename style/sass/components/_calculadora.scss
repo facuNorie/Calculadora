@@ -1,0 +1,47 @@
+
+.calculadora{
+    width: 40%;
+    margin: auto;
+    height: 95%;
+    background-color: rgba(255, 255, 255, 0.26);
+    &__div-input{
+        width: 90%;
+        margin: 20px auto;
+    }
+    &__input{
+        width: 100%;
+        height: 70px;
+        border: none;
+        font-size: 2em;
+        text-align: right;
+        &:focus{
+            outline: none;
+        }
+    }
+    &__div-buttons{
+        width: 90%;
+        margin: 0 auto;
+        height: 80%;
+        display: grid;
+        grid-template-rows: repeat(4,1fr);
+        grid-template-columns: repeat(4,1fr);
+    }
+    &__btn{
+        font-size: 2em;
+        border: none;
+        margin: 2px;
+        &:focus{
+            outline: none;
+        }
+        &:active{
+            background-color: rgb(78, 78, 78);
+            color: white;
+       }
+        &:nth-child(13){
+            grid-column: 1 / span 2;
+        }
+    }
+    &__signal{
+        background-color: darken($color: #fff, $amount: 20);
+    }
+}
