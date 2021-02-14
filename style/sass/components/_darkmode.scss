@@ -1,3 +1,5 @@
+@use ".././tools/variables" as var;
+
 .switchBtn {
     position: absolute;
     top: 20px;
@@ -36,7 +38,7 @@ input:checked + .slide {
     padding-left: 40px;
 }
 input:focus + .slide {
-    box-shadow: 0 0 1px #01aeed;
+    box-shadow: 0 0 1px #505a5e;
 }
 input:checked + .slide:before {
     -webkit-transform: translateX(26px);
@@ -55,10 +57,18 @@ input:checked + .slide:before {
 
 
 .darkMode{
-    background-color: #111;
-    color: #fff;
+    background-color: var.$blackBase;
+    color: var.$whiteBase;
+}
+
+.darkSignal{
+    background-color: darken(var.$blackBase, 20);
 }
 
 .darkCalc{
     background-color: rgba(17, 17, 17, 0.582);
+}
+
+.darkIgual{
+    background-color: #ff6f00;
 }
