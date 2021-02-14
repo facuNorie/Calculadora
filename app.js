@@ -48,15 +48,28 @@ document.querySelectorAll(".calculadora__btn").forEach(element =>{
 const mostrarResultado = valor =>{
     if(valor.includes("+")){
         let newValor = valor.split("+");
-        return parseInt(newValor[0]) + parseInt(newValor[1]);
+        let valorNumber = 0;
+        newValor.forEach(elt=>{
+            valorNumber += parseInt(elt);
+        });
+        return valorNumber;   
     }else if(valor.includes("-")){
         let newValor = valor.split("-");
-        return parseInt(newValor[0]) - parseInt(newValor[1]);
+        let valorNumber = newValor.shift();
+        newValor.forEach(elt=>{
+            valorNumber -= parseInt(elt);
+        });
+        return valorNumber;  
     }else if(valor.includes("*")){
         let newValor = valor.split("*");
-        return parseInt(newValor[0]) * parseInt(newValor[1]);
+        let valorNumber = 1;
+        newValor.forEach(elt=>{
+            valorNumber *= parseInt(elt);
+        });
+        return valorNumber;  
     }else if(valor.includes("/")){
         let newValor = valor.split("/");
+        if(newValor.length >=3) return "Error";
         return parseInt(newValor[0]) / parseInt(newValor[1]);
     }
 } 
