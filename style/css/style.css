@@ -56,9 +56,6 @@
   background-color: #646464;
   color: #eee;
 }
-.calculadora__btn:nth-child(13) {
-  grid-column: 1/span 2;
-}
 .calculadora__signal {
   background-color: #bbbbbb;
 }

@@ -1,5 +1,5 @@
 // Creando botones
-let contentButton =  ["7","8","9","+","4","5","6","-","1","2","3","*","0","=","/"];
+let contentButton =  ["7","8","9","+","4","5","6","-","1","2","3","*","0","C","=","/"];
 
 for (let i = 0; i < contentButton.length; i++) {
     let btn = document.createElement("BUTTON");
@@ -36,8 +36,10 @@ document.querySelectorAll(".calculadora__btn").forEach(element =>{
             let input = document.querySelector(".calculadora__input");
             if(element.textContent == "="){
                 input.value = mostrarResultado(input.value);
+                return;  
+            }else if(element.textContent == "C"){
+                input.value = "";
                 return;
-                
             }
             input.value += element.textContent;
         });

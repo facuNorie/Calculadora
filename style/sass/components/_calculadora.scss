@@ -42,9 +42,6 @@
             background-color: darken(var.$whiteBase, 54);
             color: var.$whiteBase;
        }
-        &:nth-child(13){
-            grid-column: 1 / span 2;
-        }
     }
     &__signal{
         background-color: darken(var.$whiteBase, 20);
