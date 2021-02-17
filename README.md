@@ -1,0 +1,1 @@
+Por ahora recalcar qe la calculadora solo hace calculos del mismo tipo de operador

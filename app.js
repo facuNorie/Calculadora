@@ -5,6 +5,7 @@ for (let i = 0; i < contentButton.length; i++) {
     let btn = document.createElement("BUTTON");
     btn.textContent = contentButton[i];
     btn.classList.add("calculadora__btn");
+    btn.style.cursor = "pointer";
     if(contentButton[i] == "+" ||contentButton[i] == "-"||contentButton[i] == "*"||contentButton[i] == "/"){
         btn.classList.add("calculadora__signal");
     }
